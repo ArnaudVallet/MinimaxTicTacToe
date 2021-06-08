@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "[plaintext]": { "editor.formatOnSave": false },
+    "[markdown]": {
+      "editor.formatOnSave": false
+    }
+  }
+  

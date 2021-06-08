@@ -1,0 +1,84 @@
+$color1: #282c34;
+$color2: #cccccc;
+$color3: #414855;
+$color4: #0f0;
+$borderWidth: 4px;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  background-color: $color1;
+  color: $color2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-title {
+  text-align: center;
+}
+
+.Board {
+  width: 300px;
+  display: block;
+  margin: auto;
+  border-color: $color2;
+  border-style: solid;
+  border-width: $borderWidth $borderWidth 0 0;
+}
+
+.Board-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Board-cell {
+  border-color: $color2;
+  border-style: solid;
+  border-width: 0 0 $borderWidth $borderWidth;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &.played {
+    cursor: default;
+  }
+  &.winCell {
+    color: $color4;
+  }
+  @extend .noselect;
+}
+
+.FeedbackBar {
+  border: $borderWidth solid $color2;
+  margin-bottom: $borderWidth;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 10px
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}
